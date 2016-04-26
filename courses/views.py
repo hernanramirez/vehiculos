@@ -22,13 +22,13 @@ class CourseDetail(DetailView):
 class CourseCreation(CreateView):
     model = Course
     success_url = reverse_lazy('courses:list')
-    fields = ['name', 'start_date', 'end_date', 'picture']
+    fields = ['course_type', 'name', 'start_date', 'end_date']
 
 
 class CourseUpdate(UpdateView):
     model = Course
     success_url = reverse_lazy('courses:list')
-    fields = ['name', 'start_date', 'end_date', 'picture']
+    fields = ['course_type', 'name', 'start_date', 'end_date']
 
 
 class CourseDelete(DeleteView):
